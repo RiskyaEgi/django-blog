@@ -1,0 +1,113 @@
+.page-header {
+  background-color: #c25100;
+  margin-top: 0;
+  margin-bottom: 40px;
+  padding: 20px 20px 20px 40px;
+}
+
+.page-header h1,
+.page-header h1 a,
+.page-header h1 a:visited,
+.page-header h1 a:active {
+  color: #ffffff;
+  font-size: 36pt;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Lobster", cursive;
+}
+
+.date {
+  color: #828282;
+}
+
+.save {
+  float: right;
+}
+
+.post-form textarea,
+.post-form input {
+  width: 100%;
+}
+
+.top-menu,
+.top-menu:hover,
+.top-menu:visited {
+  color: #ffffff;
+  float: right;
+  font-size: 26pt;
+  margin-right: 20px;
+}
+
+.post {
+  margin-bottom: 70px;
+}
+
+.post h2 a,
+.post h2 a:visited {
+  color: #000000;
+}
+
+.post > .date,
+.post > .actions {
+  float: right;
+}
+
+.btn-secondary,
+.btn-secondary:visited {
+  color: #c25100;
+  background: none;
+  border-color: #c25100;
+  margin-left: 15px;
+}
+
+.btn-secondary:hover {
+  color: #ffffff;
+  background-color: #c25100;
+}
+
+/* =========================
+   HERO BACKGROUND FIX FINAL
+========================= */
+.hero-animated {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("Planet9_Wallpaper_5000x2813.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+
+/* Konten di atas background */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+ PTI INFO SECTION
+========================= */
+.pti-info-section {
+  background: #4056a1;
+  padding: 60px 0;
+}
+
+.pti-info-section h4 {
+  color: #ffffff;
+}
+
+.pti-info-section p,
+.pti-info-section li {
+  color: #eaeaea;
+  font-size: 0.95rem;
+}
+
+.pti-info-section ul li {
+  margin-bottom: 6px;
+}
