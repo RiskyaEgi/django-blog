@@ -1,0 +1,43 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+{{ berita.judul }}
+{% endblock %}
+
+{% block content %}
+<div class="container my-5" style="max-width: 900px;">
+
+  <!-- Judul -->
+  <h1 class="fw-bold mb-2">
+    {{ berita.judul }}
+  </h1>
+
+  <!-- Tanggal -->
+  <p class="text-muted mb-4">
+    {{ berita.created_at|date:"d F Y" }}
+  </p>
+
+  <!-- Gambar -->
+  {% if berita.gambar %}
+    <img
+      src="{{ berita.gambar.url }}"
+      class="img-fluid rounded mb-4"
+      alt="{{ berita.judul }}"
+    >
+  {% endif %}
+
+  <!-- Isi -->
+  <div class="fs-6 lh-lg mb-4">
+    {{ berita.isi|linebreaks }}
+  </div>
+
+  <!-- Tombol kembali -->
+  <a
+    href="{% url 'berita' %}"
+    class="btn btn-outline-secondary"
+  >
+    ← Kembali ke Berita
+  </a>
+
+</div>
+{% endblock %}

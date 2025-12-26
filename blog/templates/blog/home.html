@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+{% block title %}Berita{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+  <h1 class="fw-bold mb-4">Berita Terbaru</h1>
+
+  <div class="row g-4">
+    {% for b in berita_list %}
+    <div class="col-md-4">
+      <div class="card shadow h-100">
+        {% if b.gambar %}
+          <img src="{{ b.gambar.url }}" class="card-img-top">
+        {% endif %}
+        <div class="card-body">
+          <h5>{{ b.judul }}</h5>
+          <p>{{ b.ringkasan|truncatewords:20 }}</p>
+          <a href="{% url 'berita_detail' b.id %}" class="btn btn-primary btn-sm">
+            Baca Selengkapnya
+          </a>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+      <p>Belum ada berita.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

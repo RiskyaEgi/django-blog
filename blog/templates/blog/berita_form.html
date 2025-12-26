@@ -1,0 +1,79 @@
+{% extends 'blog/base.html' %}
+{% block title %}Kelola Berita{% endblock %}
+
+{% block content %}
+<div class="container my-5" style="max-width: 800px;">
+
+  <!-- Heading -->
+  <div class="mb-4 border-bottom pb-2">
+    <h2 class="fw-bold text-primary mb-1">
+      Form Berita
+    </h2>
+    <p class="text-muted mb-0">
+      Program Studi Pendidikan Teknologi Informasi – UMS
+    </p>
+  </div>
+
+  <!-- Form -->
+  <form method="post" enctype="multipart/form-data" novalidate>
+    {% csrf_token %}
+
+    <!-- Error global -->
+    {% if form.non_field_errors %}
+      <div class="alert alert-danger">
+        {{ form.non_field_errors }}
+      </div>
+    {% endif %}
+
+    <!-- Judul -->
+    <div class="mb-3">
+      {{ form.judul.label_tag }}
+      {{ form.judul }}
+      {{ form.judul.errors }}
+    </div>
+
+    <!-- Ringkasan -->
+    <div class="mb-3">
+      {{ form.ringkasan.label_tag }}
+      {{ form.ringkasan }}
+      {{ form.ringkasan.errors }}
+    </div>
+
+    <!-- Isi -->
+    <div class="mb-3">
+      {{ form.isi.label_tag }}
+      {{ form.isi }}
+      {{ form.isi.errors }}
+    </div>
+
+    <!-- Gambar -->
+    <div class="mb-3">
+      {{ form.gambar.label_tag }}
+      {{ form.gambar }}
+      {{ form.gambar.errors }}
+      <div class="form-text">
+        Format gambar: JPG / PNG
+      </div>
+    </div>
+
+    <!-- Featured -->
+    <div class="form-check mb-4">
+      {{ form.featured }}
+      {{ form.featured.label_tag }}
+    </div>
+
+    <!-- Tombol -->
+    <div class="d-flex gap-2">
+      <button type="submit" class="btn btn-primary">
+        💾 Simpan
+      </button>
+
+      <a href="{% url 'berita' %}" class="btn btn-outline-secondary">
+        Batal
+      </a>
+    </div>
+
+  </form>
+
+</div>
+{% endblock %}
