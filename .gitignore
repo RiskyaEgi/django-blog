@@ -1,7 +1,7 @@
 # Python
 *.pyc
 *~
-__pycache__/
+__pycache__
 
 # Env
 .env
@@ -10,7 +10,7 @@ myenv/
 venv/
 env/
 ENV/
-.venv/
+.venv
 
 # Database
 db.sqlite3
@@ -19,22 +19,24 @@ db.sqlite3-journal
 # Django
 *.log
 local_settings.py
-/media/
-staticfiles/
+/media
+
+# Static folder at project root
+/static/
 
 # macOS
-.DS_Store
 ._*
+.DS_Store
 .fseventsd
 .Spotlight-V100
 
 # Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
+Thumbs.db*
+ehthumbs*.db
+[Dd]esktop.ini
 $RECYCLE.BIN/
 
-# Editor
+# Visual Studio
 .vscode/
 .history/
 *.code-workspace
